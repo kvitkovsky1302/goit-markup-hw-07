@@ -1,0 +1,36 @@
+.logo {
+    margin-right: 92px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--title-color);
+}
+
+.logo:hover,
+.logo:focus {
+    opacity: 0.5;
+}
+
+.logo-color {
+    color: var(--secondary-color);
+}
+
+.footer-logo {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--light-icon-color);
+    margin-bottom: 20px;
+}
+
+.footer-logo:hover,
+.footer-logo:focus {
+    opacity: 0.5;
+}
