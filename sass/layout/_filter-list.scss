@@ -1,0 +1,32 @@
+.btn-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.modal-btn {
+    background: var(--secondary-background-color);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-color);
+    border: none;
+    padding: 6px 20px;
+
+    transition: color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1),
+        background-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+    color: var(--light-icon-color);
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
