@@ -14,17 +14,17 @@
     width: 170px;
     height: 90px;
 
-    border: 1px solid var(--social-icon-light-color);
+    border: 1px solid $customers-link-color;
     border-radius: 4px;
 
-    transition: border-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color $time-hover cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link-pic {
     display: block;
-    fill: var(--social-icon-light-color);
+    fill: $customers-link-color;
 
-    transition: fill var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill $time-hover cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-item:not(:last-child) {
@@ -33,11 +33,11 @@
 
 .customers-link:hover,
 .customers-link:focus {
-    border-color: var(--secondary-color);
+    border-color: $accent-color;
     cursor: pointer;
 }
 
 .customers-link:hover .customers-link-pic,
 .customers-link:focus .customers-link-pic {
-    fill: var(--secondary-color);
+    fill: $accent-color;
 }

@@ -12,7 +12,7 @@
 }
 
 .portfolio-list-link {
-    transition: box-shadow var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow $time-hover cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-link:hover,
@@ -40,9 +40,9 @@
     overflow: scroll;
 
     background: rgba(33, 150, 243, 0.9);
-    color: var(--light-icon-color);
+    color: $social-icon-dark-theme;
     transform: translateY(100%);
-    transition: transform var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform $time-hover cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-link:hover .thumb-text,
@@ -55,7 +55,7 @@
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: var(--title-color);
+    color: $title-color;
     margin-bottom: 4px;
 }
 
@@ -64,7 +64,7 @@
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
-    color: var(--primery-text-color);
+    color: $primary-text-color;
 }
 
 .cards-title {
@@ -72,5 +72,4 @@
     // width: 370px;
     // height: 108px;
     // overflow: scroll;
-
 }

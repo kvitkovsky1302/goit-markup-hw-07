@@ -8,7 +8,7 @@
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
-    color: var(--title-color);
+    color: $title-color;
 }
 
 .logo:hover,
@@ -17,7 +17,7 @@
 }
 
 .logo-color {
-    color: var(--secondary-color);
+    color: $accent-color;
 }
 
 .footer-logo {
@@ -26,7 +26,7 @@
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
-    color: var(--light-icon-color);
+    color: $social-icon-dark-theme;
     margin-bottom: 20px;
 }
 

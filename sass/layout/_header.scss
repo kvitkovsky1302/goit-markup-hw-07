@@ -10,17 +10,17 @@
 .head-contacts:focus,
 .navigation-list-link:hover,
 .navigation-list-link:focus {
-    color: var(--secondary-color);
+    color: $accent-color;
 }
 
 .head-contacts:hover .icon-mail,
 .head-contacts:focus .icon-mail {
-    fill: var(--secondary-color);
+    fill: $accent-color;
 }
 
 .head-contacts:hover .icon-smartphone,
 .head-contacts:focus .icon-smartphone {
-    fill: var(--secondary-color);
+    fill: $accent-color;
 }
 
 .navigation {
@@ -55,9 +55,9 @@
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--title-color);
+    color: $title-color;
 
-    transition: color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color $time-hover cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .head-contacts {
@@ -68,29 +68,29 @@
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--primery-text-color);
+    color: $primary-text-color;
     fill: currentColor;
 
-    transition: color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color $time-hover cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-mail {
     display: flex;
     margin-right: 10px;
 
-    transition: fill var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill $time-hover cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-smartphone {
     display: flex;
     margin-right: 10px;
 
-    transition: fill var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill $time-hover cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current {
     position: relative;
-    color: var(--secondary-color);
+    color: $accent-color;
 }
 
 .current::after {
@@ -101,6 +101,6 @@
     width: 100%;
     height: 4px;
 
-    background: var(--secondary-color);
+    background: $accent-color;
     border-radius: 2px;
 }

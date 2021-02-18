@@ -11,7 +11,7 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--light-icon-color);
+    color: $social-icon-dark-theme;
 }
 
 .social-list {
@@ -33,26 +33,26 @@
     border-radius: 50%;
     cursor: pointer;
 
-    transition: background-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color $time-hover cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
 .social-list-link:focus {
-    background-color: var(--secondary-color);
+    background-color: $accent-color;
 }
 
 .social-list-icon {
     width: 20px;
     height: 20px;
 
-    transition: fill var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill $time-hover cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-dark-theme {
-    fill: var(--light-icon-color);
+    fill: $social-icon-dark-theme;
 }
 
 .social-list-link:hover .social-list-icon,
 .social-list-link:focus .social-list-icon {
-    fill: var(--light-icon-color);
+    fill: $social-icon-dark-theme;
 }
