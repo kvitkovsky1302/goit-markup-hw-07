@@ -31,9 +31,7 @@
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    @include text($fw:500, $ls:0.02em);
     color: $title-color;
 
     transition: color $time-hover cubic-bezier(0.4, 0, 0.2, 1);
@@ -49,9 +47,7 @@
     align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    @include text($fw:500, $ls:0.02em);
     color: $primary-text-color;
     fill: currentColor;
 
@@ -91,6 +87,7 @@
 .current {
     position: relative;
     color: $accent-color;
+
     &::after {
         display: block;
         position: absolute;

@@ -21,20 +21,14 @@
 }
 
 .team-name {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
+    @include text($fw:500, $fs:16px, $lh:1.19);
     text-align: center;
-    letter-spacing: 0.03em;
     color: $title-color;
     margin-bottom: 10px;
 }
 
 .team-profession {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.19;
+    @include text($fw:400, $fs:16px, $lh:1.19);
     text-align: center;
-    letter-spacing: 0.03em;
     margin-bottom: 16px;
 }

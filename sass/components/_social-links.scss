@@ -7,9 +7,7 @@
 .social-title,
 .submit-title {
     margin-bottom: 20px;
-    font-weight: 700;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include text();
     text-transform: uppercase;
     color: $social-icon-dark-theme;
 }

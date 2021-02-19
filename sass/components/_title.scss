@@ -1,41 +1,17 @@
 .hero-title {
+    @include text($fw:900, $fs:44px, $lh:1.36, $ls:0.06em);
     max-width: 710px;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
     text-align: center;
-    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $hero-title-color;
     margin-bottom: 30px;
 }
 
-.we-doing-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $title-color;
-    margin-bottom: 50px;
-}
-
-.team-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $title-color;
-    margin-bottom: 50px;
-}
-
+.we-doing-title,
+.team-title,
 .customers-title {
-    margin-bottom: 50px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    @include text($fs:36px, $lh:1.17);
     text-align: center;
-    letter-spacing: 0.03em;
     color: $title-color;
+    margin-bottom: 50px;
 }

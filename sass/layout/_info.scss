@@ -28,16 +28,11 @@
 
 .info-item-title {
     margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include text();
     text-transform: uppercase;
     color: $title-color;
 }
 
 .info-item-text {
-    font-weight: 400;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include text($fw:400, $lh:1.71);
 }

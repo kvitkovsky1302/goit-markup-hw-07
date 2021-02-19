@@ -1,13 +1,11 @@
 .logo {
+    @include text($fs:26px, $lh:1.19);
+
     margin-right: 92px;
     padding-top: 24px;
     padding-bottom: 25px;
 
     font-family: $secondary-font;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
     color: $title-color;
     
     &:hover,
@@ -22,11 +20,8 @@
 }
 
 .footer-logo {
+    @include text($fs:26px, $lh:1.19);
     font-family: $secondary-font;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
     color: $social-icon-dark-theme;
     margin-bottom: 20px;
     
