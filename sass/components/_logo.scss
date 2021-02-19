@@ -3,34 +3,36 @@
     padding-top: 24px;
     padding-bottom: 25px;
 
-    font-family: 'Raleway', sans-serif;
+    font-family: $secondary-font;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: $title-color;
+    
+    &:hover,
+    &:focus {
+        opacity: 0.5;
+    }
 }
 
-.logo:hover,
-.logo:focus {
-    opacity: 0.5;
-}
 
 .logo-color {
     color: $accent-color;
 }
 
 .footer-logo {
-    font-family: 'Raleway', sans-serif;
+    font-family: $secondary-font;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: $social-icon-dark-theme;
     margin-bottom: 20px;
+    
+    &:hover,
+    &:focus {
+        opacity: 0.5;
+    }
 }
 
-.footer-logo:hover,
-.footer-logo:focus {
-    opacity: 0.5;
-}

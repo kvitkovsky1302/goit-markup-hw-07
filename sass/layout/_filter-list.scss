@@ -4,29 +4,6 @@
     margin-bottom: 50px;
 }
 
-.modal-btn {
-    background: $secondary-background-color;
-    border-radius: 4px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $title-color;
-    border: none;
-    padding: 6px 20px;
-
-    transition: color $time-hover cubic-bezier(0.4, 0, 0.2, 1),
-        background-color $time-hover cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .btn-item:not(:last-child) {
     margin-right: 8px;
-}
-
-.modal-btn:hover,
-.modal-btn:focus {
-    color: $btn-color;
-    background-color: $accent-color;
-    cursor: pointer;
 }

@@ -10,16 +10,12 @@
     visibility: visible;
     transition: opacity $time-hover cubic-bezier(0.4, 0, 0.2, 1),
         visibility $time-hover cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-}
-
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.5);
+        
+        &.is-hidden {
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+        }
 }
 
 .modal {
@@ -28,15 +24,19 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     transition: transform $time-hover cubic-bezier(0.4, 0, 0.2, 1);
-
+    
     min-width: 528px;
     min-height: 580px;
     padding: 40px;
-
+    
     background: $background-modal;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
+    0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
 }
 
 .modal-close {
@@ -51,19 +51,19 @@
     cursor: pointer;
 }
 
-.modal-close:hover .modal-icon,
-.modal-close:focus .modal-icon {
-    fill: $accent-color;
-}
-
 .modal-icon {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     fill: #000000;
-
+    
     transition: fill $time-hover cubic-bezier(0.4, 0, 0.2, 1);
+    
+    .modal-close:hover &,
+    .modal-close:focus & {
+        fill: $accent-color;
+    }
 }
 
 .modal-form {
@@ -97,26 +97,14 @@
     color: $primary-text-color;
 }
 
-.modal-input:hover+.modal-form-icon,
-.modal-input:focus+.modal-form-icon {
-    fill: $accent-color;
-    cursor: pointer;
-}
-
 .modal-box {
     position: relative;
-}
-
-.modal-box:hover,
-.modal-box:focus {
-    fill: $accent-color;
-    cursor: pointer;
-}
-
-.modal-input:hover,
-.modal-input:focus {
-    border-color: $accent-color;
-    cursor: pointer;
+    
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+        cursor: pointer;
+    }
 }
 
 .modal-input {
@@ -128,8 +116,14 @@
     padding-top: 11px;
     padding-bottom: 11px;
     padding-left: 42px;
-
+    
     transition: border-color $time-hover cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover,
+    &:focus {
+        border-color: $accent-color;
+        cursor: pointer;
+    }
 }
 
 .modal-form-icon {
@@ -138,8 +132,14 @@
     left: 12px;
     transform: translateY(-50%);
     pointer-events: none;
-
+    
     transition: fill $time-hover cubic-bezier(0.4, 0, 0.2, 1);
+    
+    .modal-input:hover+&,
+    .modal-input:focus+& {
+        fill: $accent-color;
+        cursor: pointer;
+    }
 }
 
 .modal-textarea {
@@ -154,27 +154,27 @@
     overflow: scroll;
 
     transition: border-color $time-hover cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-textarea::placeholder {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-
-    transition: color $time-hover cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-textarea:hover,
-.modal-textarea:focus {
-    border-color: $accent-color;
-    cursor: pointer;
-}
-
-.modal-textarea:hover::placeholder,
-.modal-textarea:focus::placeholder {
-    color: $accent-color;
+    
+    &::placeholder {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    
+        transition: color $time-hover cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    &:hover,
+    &:focus {
+        border-color: $accent-color;
+        cursor: pointer;
+        
+        &::placeholder,
+        &::placeholder {
+            color: $accent-color;
+        }
+    }
 }
 
 .conteiner-checkbox {
@@ -193,25 +193,10 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: $primary-text-color;
-}
-
-.checkbox-label:hover {
-    cursor: pointer;
-}
-
-.checkbox-label:focus-within .checkbox-input:checked {
-    background-color: $accent-color;
-    background-image: url('../images/sprite-svg/icon-check.svg');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-origin: border-box;
-    border-color: transparent;
-}
-
-.checkbox-label:hover .checkbox-icon,
-.checkbox-label:focus-within .checkbox-icon {
-    border: 2px solid $accent-color;
-    cursor: pointer;
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .checkbox-input {
@@ -223,6 +208,15 @@
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
+    
+    .checkbox-label:focus-within &:checked {
+        background-color: $accent-color;
+        background-image: url('../images/sprite-svg/icon-check.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-origin: border-box;
+        border-color: transparent;
+    }
 }
 
 .checkbox-icon {
@@ -234,48 +228,27 @@
     box-sizing: border-box;
     border-radius: 2px;
     background-image: none;
-
+    
     transition: background-color $time-hover cubic-bezier(0.4, 0, 0.2, 1),
-        border-color $time-hover cubic-bezier(0.4, 0, 0.2, 1),
-        background-image $time-hover cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.checkbox-input:checked+.checkbox-icon {
-    background-color: $accent-color;
-    background-image: url('../images/sprite-svg/icon-check.svg');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-origin: border-box;
-    border-color: transparent;
+    border-color $time-hover cubic-bezier(0.4, 0, 0.2, 1),
+    background-image $time-hover cubic-bezier(0.4, 0, 0.2, 1);
+    
+    .checkbox-label:hover &,
+    .checkbox-label:focus-within & {
+        border: 2px solid $accent-color;
+        cursor: pointer;
+    }
+    
+    .checkbox-input:checked+& {
+        background-color: $accent-color;
+        background-image: url('../images/sprite-svg/icon-check.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-origin: border-box;
+        border-color: transparent;
+    }
 }
 
 .checkbox-link {
     color: $accent-color;
-}
-
-.submit-btn {
-    min-width: 200px;
-    min-height: 50px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 10px 52px;
-    background: $accent-color;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: none;
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    text-align: center;
-    letter-spacing: 0.06em;
-    color: $btn-color;
-
-    transition: background-color $time-hover cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.submit-btn:hover,
-.submit-btn:focus {
-    background-color: $btn-hover-bgcolor;
-    cursor: pointer;
 }

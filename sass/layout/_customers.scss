@@ -18,6 +18,12 @@
     border-radius: 4px;
 
     transition: border-color $time-hover cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        border-color: $accent-color;
+        cursor: pointer;
+    }
 }
 
 .customers-link-pic {
@@ -25,19 +31,16 @@
     fill: $customers-link-color;
 
     transition: fill $time-hover cubic-bezier(0.4, 0, 0.2, 1);
+    
+    .customers-link:hover &,
+    .customers-link:focus & {
+        fill: $accent-color;
+    }
 }
 
-.customers-item:not(:last-child) {
-    margin-right: 30px;
+.customers-item {
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
 }
 
-.customers-link:hover,
-.customers-link:focus {
-    border-color: $accent-color;
-    cursor: pointer;
-}
-
-.customers-link:hover .customers-link-pic,
-.customers-link:focus .customers-link-pic {
-    fill: $accent-color;
-}

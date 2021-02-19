@@ -9,11 +9,12 @@
 
 .info-item {
     max-width: 270px;
+    
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
 }
 
-.info-item:not(:last-child) {
-    margin-right: 30px;
-}
 
 .info-icon {
     display: flex;

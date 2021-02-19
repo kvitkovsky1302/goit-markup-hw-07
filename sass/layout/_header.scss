@@ -1,33 +1,8 @@
-.header .conteiner {
-    display: flex;
-}
-
 .header {
     border-bottom: 1px solid #ececec;
 }
 
-.head-contacts:hover,
-.head-contacts:focus,
-.navigation-list-link:hover,
-.navigation-list-link:focus {
-    color: $accent-color;
-}
-
-.head-contacts:hover .icon-mail,
-.head-contacts:focus .icon-mail {
-    fill: $accent-color;
-}
-
-.head-contacts:hover .icon-smartphone,
-.head-contacts:focus .icon-smartphone {
-    fill: $accent-color;
-}
-
-.navigation {
-    display: flex;
-    align-items: center;
-}
-
+.navigation,
 .navigation-list {
     display: flex;
     align-items: center;
@@ -39,13 +14,17 @@
     margin-left: auto;
 }
 
-.navigation-list-item:not(:last-child) {
-    display: flex;
-    margin-right: 50px;
+.navigation-list-item {
+    &:not(:last-child) {
+        display: flex;
+        margin-right: 50px;
+    }
 }
 
-.contacts-list-item:not(:last-child) {
-    margin-right: 30px;
+.contacts-list-item {
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
 }
 
 .navigation-list-link {
@@ -58,6 +37,11 @@
     color: $title-color;
 
     transition: color $time-hover cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
 }
 
 .head-contacts {
@@ -72,6 +56,11 @@
     fill: currentColor;
 
     transition: color $time-hover cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
 }
 
 .icon-mail {
@@ -79,6 +68,12 @@
     margin-right: 10px;
 
     transition: fill $time-hover cubic-bezier(0.4, 0, 0.2, 1);
+
+    .head-contacts:hover &,
+    .head-contacts:focus & {
+        fill: $accent-color;
+    }
+
 }
 
 .icon-smartphone {
@@ -86,21 +81,26 @@
     margin-right: 10px;
 
     transition: fill $time-hover cubic-bezier(0.4, 0, 0.2, 1);
+
+    .head-contacts:hover &,
+    .head-contacts:focus & {
+        fill: $accent-color;
+    }
 }
 
 .current {
     position: relative;
     color: $accent-color;
+    &::after {
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        content: '';
+        width: 100%;
+        height: 4px;
+    
+        background: $accent-color;
+        border-radius: 2px;
+    }
 }
 
-.current::after {
-    display: block;
-    position: absolute;
-    bottom: -1px;
-    content: '';
-    width: 100%;
-    height: 4px;
-
-    background: $accent-color;
-    border-radius: 2px;
-}
